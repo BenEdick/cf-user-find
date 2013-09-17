@@ -1,0 +1,24 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Email
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.name %></td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Create a New User', new_user_path %>
